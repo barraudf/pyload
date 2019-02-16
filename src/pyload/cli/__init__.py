@@ -50,7 +50,7 @@ def print_status(download):
 
 
 # TODO: use client.api instead client
-class Cli(object):
+class Cli:
     def __init__(self, client, command):
         self.client = client
         self.command = command
@@ -404,7 +404,7 @@ class Cli(object):
 
 class RefreshThread(Thread):
     def __init__(self, cli):
-        super().__init__()
+        super()
         self.daemon = True
         self.cli = cli
         self._ = cli._

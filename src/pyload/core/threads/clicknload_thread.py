@@ -18,7 +18,7 @@ js = None
 
 class BaseServerThread(threading.Thread):
     def __init__(self, manager):
-        super().__init__()
+        super()
         self.m = self.manager = manager
         self.pyload = manager.pyload
         self._ = manager.pyload._
