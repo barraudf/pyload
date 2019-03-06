@@ -79,7 +79,7 @@ class GoogledriveCom(Hoster):
                 raise
 
     def process(self, pyfile):
-        json_data = self.api_response("files/" + self.info['pattern']['ID'], fields="md5Checksum,name,size")
+        json_data = self.api_response("files/" + self.info['pattern']['ID'], fields="md5Checksum,name,size", supportsTeamDrives="true")
 
         if json_data is None:
             self.fail("API error")
